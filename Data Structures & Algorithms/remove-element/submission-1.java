@@ -1,0 +1,13 @@
+class Solution {
+    public int removeElement(int[] nums, int val) {
+        
+        // two pointers, one to read elements, the other to write the ones!=val
+        int writer = 0;
+        for (int reader=0; reader<nums.length; reader++ ) {
+            if (nums[reader]!=val){
+                nums[writer++] = nums[reader];
+            }
+        }
+        return writer; //  // number of written elements; number of elements!=val
+    }
+}
